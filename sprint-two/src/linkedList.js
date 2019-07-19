@@ -7,7 +7,7 @@ var LinkedList = function() {
     list.temp = {};
     list.temp.value = value;
     if (list.head === null) {
-      list.head = list.temp;
+      list.head = Node(value);
     } else {
       for (key in list) {
         if (list[key] === null) {
