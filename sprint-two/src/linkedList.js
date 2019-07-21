@@ -5,13 +5,10 @@ var LinkedList = function() {
 
   list.addToTail = function(value) {
     let newNode = Node(value);
-
-// 1. head and tail point to null (no nodes yet aka empty list)
     if (list.head === null && list.tail ===  null) {
       list.head = newNode;
       list.tail = newNode;
-// 2. there is one node only in list (head and tail point to the same node)
-    } else  {
+    } else {
       list.tail.next = newNode;
       list.tail = newNode;
     }
@@ -22,7 +19,6 @@ var LinkedList = function() {
     let temp = list.head.value;
     if (list.head !== null) { 
       if (list.head === list.tail) {
-        list.head = null;
         list.head = null;  
       } else if (list.head !== list.tail) {
         list.head = list.head.next;
