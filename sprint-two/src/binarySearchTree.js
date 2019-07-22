@@ -42,7 +42,7 @@ bstPrototype.depthFirstLog = function(cb) {
     this.left.depthFirstLog(cb);
   } 
   if (!!this.right) {
-    this.left.depthFirstLog(cb);
+    this.right.depthFirstLog(cb);
   }
 };
 /*
