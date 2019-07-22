@@ -36,7 +36,14 @@ bstPrototype.contains = function(value) {
   }
 };
 
-bstPrototype.depthFirstLog = function(value) {
+bstPrototype.depthFirstLog = function(cb) {
+  cb(this.value);
+  if (!!this.left) {
+    this.left.depthFirstLog(cb);
+  } 
+  if (!!this.right) {
+    this.left.depthFirstLog(cb);
+  }
 };
 /*
  * Complexity: What is the time complexity of the above functions?
